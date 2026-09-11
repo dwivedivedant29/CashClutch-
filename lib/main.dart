@@ -1,115 +1,4 @@
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const CashClutchApp());
-}
-
-class CashClutchApp extends StatelessWidget {
-  const CashClutchApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'CashClutch',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  int _navIndex = 0;
-
-  final List<Map<String, dynamic>> _offers = [
-    {
-      "title": "State of Survival",
-      "task": "Reach Headquarters Level 12",
-      "payout": 1200,
-      "tag": "HOT OFFER",
-      "icon": Icons.shield_outlined,
-    },
-    {
-      "title": "Solitaire Clash",
-      "task": "Install & Complete 3 Matches",
-      "payout": 350,
-      "tag": "EASY",
-      "icon": Icons.style_outlined,
-    },
-    {
-      "title": "Quick Survey (CPAlead)",
-      "task": "Answer 5 Gamer Questions",
-      "payout": 150,
-      "tag": "FAST",
-      "icon": Icons.bolt_outlined,
-    }
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF0C0E14),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0C0E14),
-        elevation: 0,
-        title: Row(
-          children: const [
-            CircleAvatar(
-              radius: 16,
-              backgroundColor: Color(0xFF1E2230),
-              child: Icon(Icons.person, color: Colors.white70, size: 18),
-            ),
-            SizedBox(width: 8),
-            Text(
-              "CashClutch",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-          ],
-        ),
-        actions: [
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            decoration: BoxDecoration(
-              color: const Color(0xFF1B1F2D),
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFFFFD043).withOpacity(0.4)),
-            ),
-            child: Row(
-              children: const [
-                Icon(Icons.monetization_on, color: Color(0xFFFFD043), size: 18),
-                SizedBox(width: 6),
-                Text("100 pts", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13)),
-              ],
-            ),
-          )
-        ],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: [Color(0xFF2C1458), Color(0xFF121424)]),
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: Colors.deepPurpleAccent.withOpacity(0.3)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text("DAILY REWARD", style: TextStyle(color: Colors.deepPurpleAccent, fontSize: 10, fontWeight: FontWeight.bold)),
                       SizedBox(height: 4),
@@ -137,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
               itemCount: _offers.length,
               separatorBuilder: (c, i) => const SizedBox(height: 10),
               itemBuilder: (context, index) {
-                final item = _offers[index];
+];
                 return Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
